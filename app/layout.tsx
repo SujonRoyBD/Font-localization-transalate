@@ -1,6 +1,6 @@
+import "./globals.css";
 import {NextIntlClientProvider} from "next-intl";
 import {getLocale, getMessages, setRequestLocale} from "next-intl/server";
-import Navbar from "@/app/Components/Shared/Navbar";
 
 export default async function RootLayout({children}: {children: React.ReactNode}) {
   const locale = await getLocale();
@@ -10,9 +10,8 @@ export default async function RootLayout({children}: {children: React.ReactNode}
 
   return (
     <html lang={locale}>
-      <body>
+      <body className="px-10">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>

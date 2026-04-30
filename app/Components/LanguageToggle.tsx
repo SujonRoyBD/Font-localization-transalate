@@ -22,13 +22,15 @@ export default function LanguageToggle() {
   };
 
   return (
+    <div className=" ">
     <button
       type="button"
       onClick={onClick}
-      className="rounded border border-slate-300 px-3 py-2 text-slate-800 hover:bg-slate-50"
+      className="text-white px-4 border border-none"
     >
-      English / বাংলা
+      English / franch
     </button>
+  </div>
   );
 }
 
